@@ -8,3 +8,11 @@
 		</#if>
 	</#list>
 </#macro>
+
+<#macro select totalPage url>
+	<select id="p" onChange="javascript:location.href='${url}_'+this.value+'.html'">
+		<#list 1..totalPage as p>
+			<option   value="${p}">${p}</option>
+		</#list>
+	</select>
+</#macro>

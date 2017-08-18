@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>文档标题</title>
+	<meta charset="utf-8">
+	<title>文档标题</title>
+	<script type="text/javascript">
+		window.onload=function()
+		{
+			document.getElementById("p").value = 4;
+		}
+	</script>
 </head>
  
 <body>
@@ -40,6 +46,13 @@
 			<a href="news_list_3.html">3</a>
 			4
 			<a href="news_list_5.html">5</a>
+	<select id="p" onChange="javascript:location.href='news_list_'+this.value+'.html'">
+			<option   value="1">1</option>
+			<option   value="2">2</option>
+			<option   value="3">3</option>
+			<option   value="4">4</option>
+			<option   value="5">5</option>
+	</select>
 	</div>
 </body>
  

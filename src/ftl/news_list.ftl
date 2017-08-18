@@ -2,8 +2,14 @@
 <html>
 <#include "common.ftl">
 <head>
-<meta charset="utf-8">
-<title>文档标题</title>
+	<meta charset="utf-8">
+	<title>文档标题</title>
+	<script type="text/javascript">
+		window.onload=function()
+		{
+			document.getElementById("p").value = ${pager.page};
+		}
+	</script>
 </head>
  
 <body>
@@ -24,6 +30,7 @@
 	</table>
 	<div style="margin:0 auto; text-align:center;">
 		<@page totalPage=pager.totalPage url="news_list" currPage=pager.page />
+		<@select totalPage=pager.totalPage url="news_list"  />
 	</div>
 </body>
  
